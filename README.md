@@ -15,6 +15,6 @@ In script.js, add the name of the stats you would like to be displayed in the se
 const selectedStats = ["Taxation", "Average Income", "Average Income of Poor", "Average Income of Rich"];
 const statPositive = [false, true, true, true];
 ```
-And the extension pop-up looks like this:
+Run the extension **while you are on the issue page** and the extension pop-up should look like this:
 
 ![Demo of the extension](/assets/demo.png "Demo of the extension")
