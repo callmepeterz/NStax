@@ -1,0 +1,20 @@
+table, th, td {
+    border: 1px solid;
+}
+
+.word-positive {
+    color: #00ab41
+}
+
+.word-negative {
+    color: red;
+    
+}
+
+.background-positive {
+    background-color : lightgreen
+}
+
+.background-negative {
+    background-color : lightcoral
+}

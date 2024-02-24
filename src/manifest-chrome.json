@@ -1,0 +1,24 @@
+{
+    "name": "NStax",
+    "version": "1.0.0",
+    "description": "Browser extension to show results of NationStates issues",
+    "manifest_version": 3,
+    "author": "callmepeterz",
+    "icons": {
+        "128": "img/icon128.png"
+      },
+    "action":{
+        "default_icons": {
+            "128": "img/icon128.png"
+        },
+        "default_popup": "index.html",
+        "default_title": "NStax"
+    },
+    "host_permissions":[
+        "https://www.nationstates.net/page=show_dilemma/dilemma=*",
+        "http://www.mwq.dds.nl/*"
+    ],
+    "permissions": [
+        "activeTab"
+     ]
+}
