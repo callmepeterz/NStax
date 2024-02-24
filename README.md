@@ -16,4 +16,5 @@ const selectedStats = ["Taxation", "Average Income", "Average Income of Poor", "
 const statPositive = [false, true, true, true];
 ```
 And the extension pop-up looks like this:
+
 ![Demo of the extension](/assets/demo.png "Demo of the extension")
