@@ -1,20 +1,59 @@
-table, th, td {
-    border: 1px solid;
+html {
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #1e2127;
+    /* line-height: 1.15; */
+}
+
+#main-div {
+    width: 800px;
+}
+
+a {
+    color: #b5e2fa;
+}
+
+h2 {
+    color: white;
+}
+
+table,
+th,
+td,
+ul,
+li {
+    background-color: #252830;
+    color: white;
+}
+
+#main-table {
+    font-size: small;
+    table-layout: fixed;
+    width: fit-content;
+}
+
+#headers th {
+    background-color: #313143;
+    width: 200px;
+    /* border: 1px solid whitesmoke; */
+}
+
+#credits {
+    font-size: 2vh;
+    color: white;
 }
 
 .word-positive {
-    color: #00ab41
+    color: #17ac84;
 }
 
 .word-negative {
-    color: red;
-    
+    color: #b13a56;
 }
 
 .background-positive {
-    background-color : lightgreen
+    background-color: #17ac84;
 }
 
 .background-negative {
-    background-color : lightcoral
+    background-color: #b13a56;
 }

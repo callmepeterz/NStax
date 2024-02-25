@@ -8,9 +8,9 @@ async function fetchData(tabs) {
     console.log(selectedStats)
 
     for (s of selectedStats) {
-        document.getElementById("header").innerHTML += `<th style="width: 70px">${s.name}</th>`;
+        document.getElementById("headers").innerHTML += `<th style="width: 70px">${s.name}</th>`;
     }
-    document.getElementById("header").innerHTML += "<th>Notabilities/Policies</th>";
+    document.getElementById("headers").innerHTML += "<th>Notabilities/Policies</th>";
 
     let url = tabs[0].url;
     if (!url.startsWith("https://www.nationstates.net/page=show_dilemma/dilemma=")) {

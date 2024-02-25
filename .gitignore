@@ -124,3 +124,6 @@ manifest.json
 
 # config file
 config.json
+
+#prettier ignore
+.prettierignore

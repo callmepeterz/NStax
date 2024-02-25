@@ -15,6 +15,10 @@
         {
             "name": "Average Income of Rich",
             "isPositive": true
+        },
+        {
+            "name": "Economy",
+            "isPositive": true
         }
     ]
 }
