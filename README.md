@@ -15,7 +15,7 @@ In `src/config.json`, in the `stats` array, create an object for every stat you 
 *For example*, if you want the extension to show Taxation, Average Income, Average Income of Poor, and Average Income of Rich, and you prefer Taxation to decrease while preferring the rest to increase, the selectedStats array and the statPositive array should look like this:
 ```json
 {
-    "stats" :[
+    "stats": [
         {
             "name": "Taxation",
             "isPositive": false
