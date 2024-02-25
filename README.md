@@ -10,12 +10,30 @@ A browser extension to show results of NationStates issues
 1. In `src`, rename `manifest-firefox.json` to `manifest.json`.
 2. Go to `about:debugging#/runtime/this-firefox` and load the temporary add-on from the `src` directory.
 ## To configure stats shown
-In `src/script.js`, add the name of the stats you would like to be displayed in the selectedStats array (case sensitive, enter name exactly as shown on Nationstates). In the statPositive array, set to `true` if you prefer the entered stat to increase and `false` if you prefer the stat to decrease.
+In `src/config.json`, in the `stats` array, create an object for every stat you would like to be displayed with the `name` property being the name of the stat (case sensitive, enter name exactly as shown on Nationstates) and the `isPositive` property set to `true` if you prefer the entered stat to increase and `false` if you prefer the stat to decrease.
 
 *For example*, if you want the extension to show Taxation, Average Income, Average Income of Poor, and Average Income of Rich, and you prefer Taxation to decrease while preferring the rest to increase, the selectedStats array and the statPositive array should look like this:
-```
-const selectedStats = ["Taxation", "Average Income", "Average Income of Poor", "Average Income of Rich"];
-const statPositive = [false, true, true, true];
+```json
+{
+    "stats" :[
+        {
+            "name": "Taxation",
+            "isPositive": false
+        },
+        {
+            "name": "Average Income",
+            "isPositive": true
+        },
+        {
+            "name": "Average Income of Poor",
+            "isPositive": true
+        },
+        {
+            "name": "Average Income of Rich",
+            "isPositive": true
+        }
+    ]
+}
 ```
 Run the extension **while you are on the issue page** and the extension pop-up should look like this:
 

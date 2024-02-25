@@ -1,25 +1,21 @@
-// SETTINGS
-// =================================================
-
-// enter stats that you would like to request (case sensitive)
-const selectedStats = ["Taxation", "Average Income", "Average Income of Poor", "Average Income of Rich"];
-
-// set to true if you want stat to increase, false if you want stat to decrease
-const statPositive = [false, true, true, true];
-
-// =================================================
-
-for (s of selectedStats) {
-    document.getElementById("header").innerHTML += `<th style="width: 70px">${s}</th>`;
-}
-document.getElementById("header").innerHTML += "<th>Notabilities/Policies</th>";
-
 chrome.tabs.query({ active: true, lastFocusedWindow: true }, tabs => fetchData(tabs));
 
 async function fetchData(tabs) {
+    const rawconfig = await fetch("config.json");
+    const configjson = await rawconfig.json();
+    const selectedStats = configjson.stats;
+
+    console.log(selectedStats)
+
+    for (s of selectedStats) {
+        document.getElementById("header").innerHTML += `<th style="width: 70px">${s.name}</th>`;
+    }
+    document.getElementById("header").innerHTML += "<th>Notabilities/Policies</th>";
+
     let url = tabs[0].url;
     if (!url.startsWith("https://www.nationstates.net/page=show_dilemma/dilemma=")) {
         document.getElementById("issue-title").innerText = "Issue page not detected!";
+        return;
     }
 
     const res = await fetch(`http://www.mwq.dds.nl/ns/results/${url.replace("https://www.nationstates.net/page=show_dilemma/dilemma=", "")}.html`)
@@ -47,10 +43,9 @@ async function fetchData(tabs) {
 
         for (stat of statArray) {
             let detectedStat = testStat(selectedStats, stat);
-            let detectedStatIndex = selectedStats.indexOf(detectedStat);
 
-            if (detectedStat) {
-                enteredStat[detectedStatIndex] = stat.replace(detectedStat + " ", "");
+            if (detectedStat.index !== -1) {
+                enteredStat[detectedStat.index] = stat.replace(detectedStat.name + " ", "");
             }
             else if (/(adds|removes)/.test(stat)) {
                 notabilities += `<li>` + stat.replace("adds", `<span class=word-positive><b>adds</b></span>`).replace("removes", `<span class=word-negative><b>removes</b></span>`).replace(": ", ": <b>") + "</b></li>";
@@ -60,7 +55,7 @@ async function fetchData(tabs) {
         for (let i = 0; i < selectedStats.length; i++) {
             if (enteredStat[i]) {
                 let mean = parseFloat(enteredStat[i].replace(/(.* \(mean |\))/, ""));
-                let colorclass = statPositive[i] ? (mean < 0 ? "background-negative" : "background-positive") : (mean > 0 ? "background-negative" : "background-positive");
+                let colorclass = selectedStats[i].isPositive ? (mean < 0 ? "background-negative" : "background-positive") : (mean > 0 ? "background-negative" : "background-positive");
                 outputhtml += `<td class=${colorclass}>` + enteredStat[i] + "</td>";
             }
             else {
@@ -76,13 +71,15 @@ async function fetchData(tabs) {
 }
 
 function testStat(selectedStats, stat) {
-    let result = "";
+    let detectedStatName = "";
+    let detectedStatIndex = -1;
     for (s of selectedStats) {
-        let statRegex = new RegExp(`[0-9]+ ${s} \\(mean`);
+        let statRegex = new RegExp(`[0-9]+ ${s.name} \\(mean`);
         if (statRegex.test(stat)) {
-            result = s;
+            detectedStatName = s.name;
+            detectedStatIndex = selectedStats.indexOf(s);
             break;
         }
     }
-    return result;
+    return {name: detectedStatName, index: detectedStatIndex};
 }

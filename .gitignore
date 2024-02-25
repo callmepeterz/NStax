@@ -121,3 +121,6 @@ package-lock.json
 
 # manifest.json extension file
 manifest.json
+
+# config file
+config.json
