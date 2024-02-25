@@ -123,4 +123,4 @@ package-lock.json
 manifest.json
 
 # config file
-src/config.json
+config.json
