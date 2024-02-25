@@ -18,5 +18,9 @@
         "https://www.nationstates.net/page=show_dilemma/dilemma=*",
         "http://www.mwq.dds.nl/*"
     ],
-    "permissions": ["activeTab"]
+    "permissions": [
+        "activeTab",
+        "storage"
+    ],
+    "options_page": "./options/index.html"
 }

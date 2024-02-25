@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NStax Options</title>
+    <link href="../style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="maindiv">
+        <h2 id="issue-title">NStax Options</h2>
+        <h3>Preview</h3>
+        <table id="main-table">
+            <thead>
+            <tr id="headers"></tr>
+            </thead>
+            <tbody id="table-content">
+            
+            </tbody>
+        </table>
+    </div>
+    <select id="stat">
+        <option value="" selected disabled hidden>Select stat to edit</option>
+        <option value="Civil Rights">Civil Rights</option>
+        <option value="Economy">Economy</option>
+        <option value="Political Freedom">Political Freedom</option>
+        <option value="Population">Population</option>
+        <option value="Authoritarianism">Authoritarianism</option>
+        <option value="Average Disposable Income">Average Disposable Income</option>
+        <option value="Average Income">Average Income</option>
+        <option value="Average Income of Poor">Average Income of Poor</option>
+        <option value="Average Income of Rich">Average Income of Rich</option>
+        <option value="Averageness">Averageness</option>
+        <option value="Black Market">Black Market</option>
+        <option value="Business Subsidization">Business Subsidization</option>
+        <option value="Charmlessness">Charmlessness</option>
+        <option value="Cheerfulness">Cheerfulness</option>
+        <option value="Compassion">Compassion</option>
+        <option value="Compliance">Compliance</option>
+        <option value="Corruption">Corruption</option>
+        <option value="Crime">Crime</option>
+        <option value="Culture">Culture</option>
+        <option value="Death Rate">Death Rate</option>
+        <option value="Defense Forces">Defense Forces</option>
+        <option value="Eco-Friendliness">Eco-Friendliness</option>
+        <option value="Economic Freedom">Economic Freedom</option>
+        <option value="Economic Output">Economic Output</option>
+        <option value="Employment">Employment</option>
+        <option value="Environmental Beauty">Environmental Beauty</option>
+        <option value="Food Quality">Food Quality</option>
+        <option value="Foreign Aid">Foreign Aid</option>
+        <option value="Freedom From Taxation">Freedom From Taxation</option>
+        <option value="Government Size">Government Size</option>
+        <option value="Health">Health</option>
+        <option value="Human Development Index">Human Development Index</option>
+        <option value="Ideological Radicality">Ideological Radicality</option>
+        <option value="Ignorance">Ignorance</option>
+        <option value="Inclusiveness">Inclusiveness</option>
+        <option value="Income Equality">Income Equality</option>
+        <option value="Industry: Arms Manufacturing">Industry: Arms Manufacturing</option>
+        <option value="Industry: Automobile Manufacturing">Industry: Automobile Manufacturing</option>
+        <option value="Industry: Basket Weaving">Industry: Basket Weaving</option>
+        <option value="Industry: Beverage Sales">Industry: Beverage Sales</option>
+        <option value="Industry: Book Publishing">Industry: Book Publishing</option>
+        <option value="Industry: Cheese Exports">Industry: Cheese Exports</option>
+        <option value="Industry: Furniture Restoration">Industry: Furniture Restoration</option>
+        <option value="Industry: Gambling">Industry: Gambling</option>
+        <option value="Industry: Information Technology">Industry: Information Technology</option>
+        <option value="Industry: Insurance">Industry: Insurance</option>
+        <option value="Industry: Mining">Industry: Mining</option>
+        <option value="Industry: Pizza Delivery">Industry: Pizza Delivery</option>
+        <option value="Industry: Retail">Industry: Retail</option>
+        <option value="Industry: Timber Woodchipping">Industry: Timber Woodchipping</option>
+        <option value="Industry: Trout Fishing">Industry: Trout Fishing</option>
+        <option value="Influence">Influence</option>
+        <option value="Integrity">Integrity</option>
+        <option value="Intelligence">Intelligence</option>
+        <option value="International Artwork">International Artwork</option>
+        <option value="Law Enforcement">Law Enforcement</option>
+        <option value="Lifespan">Lifespan</option>
+        <option value="Niceness">Niceness</option>
+        <option value="Nudity">Nudity</option>
+        <option value="Obesity">Obesity</option>
+        <option value="Pacifism">Pacifism</option>
+        <option value="Patriotism">Patriotism</option>
+        <option value="Political Apathy">Political Apathy</option>
+        <option value="Primitiveness">Primitiveness</option>
+        <option value="Public Education">Public Education</option>
+        <option value="Public Healthcare">Public Healthcare</option>
+        <option value="Public Transport">Public Transport</option>
+        <option value="Recreational Drug Use">Recreational Drug Use</option>
+        <option value="Religiousness">Religiousness</option>
+        <option value="Residency">Residency</option>
+        <option value="Rudeness">Rudeness</option>
+        <option value="Safety">Safety</option>
+        <option value="Scientific Advancement">Scientific Advancement</option>
+        <option value="Sector: Agriculture">Sector: Agriculture</option>
+        <option value="Sector: Manufacturing">Sector: Manufacturing</option>
+        <option value="Secularism">Secularism</option>
+        <option value="Social Conservatism">Social Conservatism</option>
+        <option value="Taxation">Taxation</option>
+        <option value="Tourism">Tourism</option>
+        <option value="Wealth Gaps">Wealth Gaps</option>
+        <option value="Weaponization">Weaponization</option>
+        <option value="Weather">Weather</option>
+        <option value="Welfare">Welfare</option>
+        <option value="World Assembly Endorsements">World Assembly Endorsements</option>
+        <option value="Youth Rebelliousness">Youth Rebelliousness</option>
+    </select>
+
+    <label>
+        <input type="checkbox" id="positive" disabled="disabled" />
+        Positive
+    </label>
+    <button id="left"><<</button>
+    <button id="right">>></button>
+    <button id="add">Add</button>
+    <button id="remove">Remove</button>
+    <br>
+    <label>
+      <input type="checkbox" id="shownotabilities" />
+      Show Notabilities/Policies
+    </label>
+    <br>
+    <button id="save">Save</button>
+    <button id="exit">Exit</button>
+
+    <div id="status"></div>
+
+    <script src="options.js"></script>
+  </body>
+</html>

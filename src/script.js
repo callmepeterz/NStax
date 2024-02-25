@@ -1,16 +1,24 @@
 chrome.tabs.query({ active: true, lastFocusedWindow: true }, tabs => fetchData(tabs));
+document.getElementById("options").addEventListener("click", ()=>chrome.runtime.openOptionsPage());
 
-async function fetchData(tabs) {
-    const rawconfig = await fetch("config.json");
-    const configjson = await rawconfig.json();
-    const selectedStats = configjson.stats;
+async function fetchData(tabs) { 
+    const storageconfig = await chrome.storage.sync.get(["stats", "showNotabilities"]);
+    let selectedConfig;
 
-    console.log(selectedStats)
+    if(!storageconfig?.stats?.length){
+        const rawconfig = await fetch("default.json");
+        const configjson = await rawconfig.json();
+        await chrome.storage.sync.set(configjson);
+        selectedConfig = configjson;
+    }
+    else selectedConfig = storageconfig;
+
+    const selectedStats = selectedConfig.stats;
 
     for (s of selectedStats) {
         document.getElementById("headers").innerHTML += `<th style="width: 70px">${s.name}</th>`;
     }
-    document.getElementById("headers").innerHTML += "<th>Notabilities/Policies</th>";
+    if(selectedConfig.showNotabilities) document.getElementById("headers").innerHTML += "<th>Notabilities/Policies</th>";
 
     let url = tabs[0].url;
     if (!url.startsWith("https://www.nationstates.net/page=show_dilemma/dilemma=")) {
@@ -40,7 +48,6 @@ async function fetchData(tabs) {
         let outputhtml = `<tr><td>${e.querySelector("td:nth-child(1)").innerText}</td>`;
         let notabilities = "<td><ul>";
         let enteredStat = [];
-
         for (stat of statArray) {
             let detectedStat = testStat(selectedStats, stat);
 
@@ -65,7 +72,7 @@ async function fetchData(tabs) {
 
         notabilities += "</ul></td>";
 
-        document.getElementById("table-content").innerHTML += outputhtml + notabilities + "</tr>";
+        document.getElementById("table-content").innerHTML += outputhtml + (selectedConfig.showNotabilities ? notabilities : '') + "</tr>";
     }
 
 }

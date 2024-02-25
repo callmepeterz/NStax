@@ -18,36 +18,9 @@ A browser extension to show results of NationStates issues
 
 ## To configure stats shown
 
-In `src/config.json`, in the `stats` array, create an object for every stat you would like to be displayed with the `name` property being the name of the stat (case sensitive, enter name exactly as shown on Nationstates) and the `isPositive` property set to `true` if you prefer the entered stat to increase and `false` if you prefer the stat to decrease.
+Go to the Options page by clicking on the `Options` button in the top right corner of the pop-up, or right-clicking on the extension icon in the toolbar and selecting `Options`. Configure the stats you would like to be shown. Check the `Positive` checkbox if you prefer the entered stat to increase and uncheck the checkbox if you prefer the stat to decrease. Check the `Show Notabilities/Policies` if you would like notabilities and policies to be shown. Click `Save` to save changes.
 
-_For example_, if you want the extension to show Taxation, Average Income, Average Income of Poor, and Average Income of Rich, and you prefer Taxation to decrease while preferring the rest to increase, the selectedStats array and the statPositive array should look like this:
-
-```json
-{
-    "stats": [
-        {
-            "name": "Taxation",
-            "isPositive": false
-        },
-        {
-            "name": "Average Income",
-            "isPositive": true
-        },
-        {
-            "name": "Average Income of Poor",
-            "isPositive": true
-        },
-        {
-            "name": "Average Income of Rich",
-            "isPositive": true
-        },
-        {
-            "name": "Economy",
-            "isPositive": true
-        }
-    ]
-}
-```
+## To use
 
 Run the extension **while you are on the issue page** and the extension pop-up should look like this:
 

@@ -20,5 +20,6 @@
             "name": "Economy",
             "isPositive": true
         }
-    ]
+    ],
+    "showNotabilities": true
 }
