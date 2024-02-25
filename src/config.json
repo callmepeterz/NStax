@@ -1,0 +1,20 @@
+{
+    "stats" :[
+        {
+            "name": "Taxation",
+            "isPositive": false
+        },
+        {
+            "name": "Average Income",
+            "isPositive": true
+        },
+        {
+            "name": "Average Income of Poor",
+            "isPositive": true
+        },
+        {
+            "name": "Average Income of Rich",
+            "isPositive": true
+        }
+    ]
+}
