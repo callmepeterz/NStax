@@ -1,9 +1,11 @@
 # NStax
 A browser extension to show results of NationStates issues
 ## Installation
-### Chrome (also Edge and OperaGX)
+### Chrome, Edge, and Opera GX
 1. In `src`, rename `manifest-chrome.json` to `manifest.json`.
-2. Go to `chrome://extensions`, enable "Developer Mode" and load the unpacked extension from the `src` directory.
+2. * **Chrome**: Go to `chrome://extensions`, enable Developer mode, and load the unpacked extension from the `src` directory.
+    * **Edge**: Go to `Settings and more` (3-dot menu on the top right corner), select `Extensions`, enable Developer mode, and load the temporary add-on from the `src` directory.
+    * **Opera GX**: Go to `opera:extensions`, enable Developer mode, and load the unpacked extension from the `src` directory.
 ### Firefox
 1. In `src`, rename `manifest-firefox.json` to `manifest.json`.
 2. Go to `about:debugging#/runtime/this-firefox` and load the temporary add-on from the `src` directory.

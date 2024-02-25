@@ -118,3 +118,6 @@ Thumbs.db
 
 # npm file
 package-lock.json
+
+# manifest.json extension file
+manifest.json
