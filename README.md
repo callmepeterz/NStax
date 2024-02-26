@@ -21,7 +21,7 @@ A browser extension to show results of NationStates issues
 
 ## To configure stats shown
 
-Go to the Options page by clicking on the `Options` button in the top right corner of the pop-up, or right-clicking on the extension icon in the toolbar and selecting `Options`. Configure the stats you would like to be shown. Check the `Positive` checkbox if you prefer the entered stat to increase and uncheck the checkbox if you prefer the stat to decrease. Check the `Show Notabilities/Policies` if you would like notabilities and policies to be shown. Click `Save` to save changes.
+Go to the Options page by clicking on the **Gear Icon** in the top right corner of the pop-up, or right-clicking on the extension icon in the toolbar and selecting `Options` (`Extension option` if you're using Edge). Configure the stats you would like to be shown. Check the `Positive` checkbox if you prefer the entered stat to increase and uncheck the checkbox if you prefer the stat to decrease. Check the `Show Notabilities/Policies` if you would like notabilities and policies to be shown. Click `Save` to save changes.
 
 ## To use
 
