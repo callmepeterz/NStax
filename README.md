@@ -15,6 +15,9 @@ A browser extension to show results of NationStates issues
 
 1. In `src`, rename `manifest-firefox.json` to `manifest.json`.
 2. Go to `about:debugging#/runtime/this-firefox` and load the temporary add-on from the `src` directory.
+3. Go to `about:addons`, select the NStax extension, go to `Permissions`, and turn on all permissions for the extension.
+
+![Firefox extension permissions screenshot](/assets/firefox_permissions.png "Firefox extension permissions")
 
 ## To configure stats shown
 

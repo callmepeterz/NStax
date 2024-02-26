@@ -19,8 +19,15 @@
         "activeTab",
         "storage"
     ],
-    "options_page": "options/index.html",
+    "options_ui": {
+        "page": "options/index.html"
+    },
     "content_security_policy": {
         "extension_pages": "script-src 'self'; object-src 'self'"
+    },
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "NStaxExtension@callmepeterz"
+        }
     }
 }
