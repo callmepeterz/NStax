@@ -12,7 +12,7 @@ a {
     color: #b5e2fa;
 }
 
-h2 {
+h2, h3 {
     color: white;
 }
 
@@ -40,6 +40,42 @@ li {
 #credits {
     font-size: 12px;
     color: white;
+}
+
+#shownotabilities-container {
+    color: white;
+    font-size: 15px;
+    display: flex;
+}
+
+#shownotabilities {
+    
+}
+#positive-container{
+    display: flex;
+    color: white;
+} 
+
+/* #positive-container p {
+    color: white;
+} */
+
+#status {
+    color: white;
+}
+
+#options {
+    background-color: #1e2127;
+    border: 0px;
+}
+
+#gear-icon {
+    width: 25px;
+}
+
+.title-options-container {
+    display: flex;
+    justify-content: space-between;
 }
 
 .word-positive {
