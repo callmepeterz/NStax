@@ -4,18 +4,20 @@ A browser extension to show results of NationStates issues
 
 ## Installation
 
-### Chrome, Edge, and Opera GX
+### Chrome, Edge, Opera GX, and Other Chromium-based browsers
 
-1. In `src`, rename `manifest-chrome.json` to `manifest.json`.
-2.  - **Chrome**: Go to `chrome://extensions`, enable Developer mode, and load the unpacked extension from the `src` directory.
-    - **Edge**: Go to `Settings and more` (3-dot menu in the top right corner), select `Extensions`, enable Developer mode, and load the temporary add-on from the `src` directory.
-    - **Opera GX**: Go to `opera:extensions`, enable Developer mode, and load the unpacked extension from the `src` directory.
+1. Download `NStax-x.y.z-chrome.zip` [here](https://github.com/callmepeterz/NStax/releases/latest).
+2. Extract the downloaded file.
+2.  - **Chrome**: Go to `chrome://extensions`, enable Developer mode, and load the unpacked extension from the extracted folder.
+    - **Edge**: Go to `Settings and more` (3-dot menu in the top right corner), select `Extensions`, enable Developer mode, and load the temporary add-on from the extracted folder.
+    - **Opera GX**: Go to `opera:extensions`, enable Developer mode, and load the unpacked extension from the extracted folder.
 
 ### Firefox
 
-1. In `src`, rename `manifest-firefox.json` to `manifest.json`.
-2. Go to `about:debugging#/runtime/this-firefox` and load the temporary add-on from the `src` directory.
-3. Go to `about:addons`, select the NStax extension, go to `Permissions`, and turn on all permissions for the extension.
+1. Download `NStax-x.y.z-firefox.zip` [here](https://github.com/callmepeterz/NStax/releases/latest).
+2. Extract the downloaded file.
+3. Go to `about:debugging#/runtime/this-firefox` and load the temporary add-on from the extracted folder.
+4. Go to `about:addons`, select the NStax extension, go to `Permissions`, and turn on all permissions for the extension.
 
 ![Firefox extension permissions screenshot](/assets/firefox_permissions.png "Firefox extension permissions")
 
